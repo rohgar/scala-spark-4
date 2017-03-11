@@ -1,0 +1,604 @@
+<classpath>
+  <classpathentry kind="src" path="src/main/scala"/>
+  <classpathentry kind="src" path="src/test/scala"/>
+  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/srcs/scala-xml_2.11-1.0.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/docs/scala-xml_2.11-1.0.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-core_2.11/srcs/spark-core_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-core_2.11/docs/spark-core_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.avro/avro-mapred/jars/avro-mapred-1.7.7-hadoop2.jar"/>
+  <classpathentry kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.7-tests.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.avro/avro-ipc/srcs/avro-ipc-1.7.7-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.avro/avro-ipc/docs/avro-ipc-1.7.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.avro/avro/srcs/avro-1.7.7-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.avro/avro/bundles/avro-1.7.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.avro/avro/docs/avro-1.7.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/srcs/jackson-core-asl-1.9.13-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.13.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/docs/jackson-core-asl-1.9.13-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/srcs/jackson-mapper-asl-1.9.13-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.13.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/docs/jackson-mapper-asl-1.9.13-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.xerial.snappy/snappy-java/srcs/snappy-java-1.1.2.4-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.1.2.4.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.xerial.snappy/snappy-java/docs/snappy-java-1.1.2.4-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-compress/srcs/commons-compress-1.4.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.4.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-compress/docs/commons-compress-1.4.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.tukaani/xz/srcs/xz-1.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.tukaani/xz/docs/xz-1.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.16-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.16.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.slf4j/slf4j-api/docs/slf4j-api-1.7.16-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.twitter/chill_2.11/srcs/chill_2.11-0.8.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.twitter/chill_2.11/jars/chill_2.11-0.8.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.twitter/chill_2.11/docs/chill_2.11-0.8.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.twitter/chill-java/srcs/chill-java-0.8.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.twitter/chill-java/jars/chill-java-0.8.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.twitter/chill-java/docs/chill-java-0.8.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.esotericsoftware/kryo-shaded/srcs/kryo-shaded-3.0.3-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.esotericsoftware/kryo-shaded/bundles/kryo-shaded-3.0.3.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.esotericsoftware/kryo-shaded/docs/kryo-shaded-3.0.3-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.esotericsoftware/minlog/srcs/minlog-1.3.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.esotericsoftware/minlog/bundles/minlog-1.3.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.esotericsoftware/minlog/docs/minlog-1.3.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.objenesis/objenesis/srcs/objenesis-2.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-2.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.objenesis/objenesis/docs/objenesis-2.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.xbean/xbean-asm5-shaded/srcs/xbean-asm5-shaded-4.4-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.xbean/xbean-asm5-shaded/bundles/xbean-asm5-shaded-4.4.jar"/>
+  <classpathentry kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-client/jars/hadoop-client-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-client/docs/hadoop-client-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-common/srcs/hadoop-common-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-common/docs/hadoop-common-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-annotations/srcs/hadoop-annotations-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-annotations/jars/hadoop-annotations-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-annotations/docs/hadoop-annotations-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="lib" path="/Users/rohitvg/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-1.3.9.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-cli/commons-cli/srcs/commons-cli-1.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/commons-cli/commons-cli/docs/commons-cli-1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-math/srcs/commons-math-2.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-math/jars/commons-math-2.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-math/docs/commons-math-2.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="lib" path="/Users/rohitvg/.ivy2/cache/xmlenc/xmlenc/jars/xmlenc-0.52.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-httpclient/commons-httpclient/srcs/commons-httpclient-3.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-httpclient/commons-httpclient/jars/commons-httpclient-3.1.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-io/commons-io/srcs/commons-io-2.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/commons-io/commons-io/docs/commons-io-2.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-net/commons-net/srcs/commons-net-2.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-net/commons-net/jars/commons-net-2.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/commons-net/commons-net/docs/commons-net-2.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/log4j/log4j/srcs/log4j-1.2.17-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/log4j/log4j/docs/log4j-1.2.17-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-lang/commons-lang/srcs/commons-lang-2.5-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-lang/commons-lang/jars/commons-lang-2.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/commons-lang/commons-lang/docs/commons-lang-2.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-configuration/commons-configuration/srcs/commons-configuration-1.6-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-configuration/commons-configuration/jars/commons-configuration-1.6.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-collections/commons-collections/srcs/commons-collections-3.2.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/commons-collections/commons-collections/docs/commons-collections-3.2.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-digester/commons-digester/srcs/commons-digester-1.8-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-digester/commons-digester/jars/commons-digester-1.8.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-beanutils/commons-beanutils/srcs/commons-beanutils-1.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.7.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/commons-beanutils/commons-beanutils/docs/commons-beanutils-1.7.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-beanutils/commons-beanutils-core/jars/commons-beanutils-core-1.8.0.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.google.protobuf/protobuf-java/srcs/protobuf-java-2.5.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.google.protobuf/protobuf-java/bundles/protobuf-java-2.5.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.google.protobuf/protobuf-java/docs/protobuf-java-2.5.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-auth/srcs/hadoop-auth-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-auth/jars/hadoop-auth-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-auth/docs/hadoop-auth-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-hdfs/srcs/hadoop-hdfs-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-hdfs/jars/hadoop-hdfs-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-hdfs/docs/hadoop-hdfs-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.mortbay.jetty/jetty-util/srcs/jetty-util-6.1.26-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.mortbay.jetty/jetty-util/jars/jetty-util-6.1.26.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.mortbay.jetty/jetty-util/docs/jetty-util-6.1.26-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/srcs/hadoop-mapreduce-client-app-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/jars/hadoop-mapreduce-client-app-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/docs/hadoop-mapreduce-client-app-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/srcs/hadoop-mapreduce-client-common-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/jars/hadoop-mapreduce-client-common-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/docs/hadoop-mapreduce-client-common-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/srcs/hadoop-yarn-common-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/jars/hadoop-yarn-common-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/docs/hadoop-yarn-common-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/srcs/hadoop-yarn-api-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/jars/hadoop-yarn-api-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/docs/hadoop-yarn-api-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.slf4j/slf4j-log4j12/srcs/slf4j-log4j12-1.7.16-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.7.16.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.slf4j/slf4j-log4j12/docs/slf4j-log4j12-1.7.16-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.google.inject/guice/srcs/guice-3.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.google.inject/guice/jars/guice-3.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.google.inject/guice/docs/guice-3.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/javax.inject/javax.inject/srcs/javax.inject-1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/javax.inject/javax.inject/docs/javax.inject-1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/aopalliance/aopalliance/srcs/aopalliance-1.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.sonatype.sisu.inject/cglib/srcs/cglib-2.2.1-v20090111-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.sonatype.sisu.inject/cglib/jars/cglib-2.2.1-v20090111.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.sonatype.sisu.inject/cglib/docs/cglib-2.2.1-v20090111-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/srcs/hadoop-yarn-client-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/jars/hadoop-yarn-client-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/docs/hadoop-yarn-client-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/srcs/hadoop-mapreduce-client-core-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/docs/hadoop-mapreduce-client-core-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-common/srcs/hadoop-yarn-server-common-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-common/jars/hadoop-yarn-server-common-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-common/docs/hadoop-yarn-server-common-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/srcs/hadoop-mapreduce-client-shuffle-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/jars/hadoop-mapreduce-client-shuffle-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/docs/hadoop-mapreduce-client-shuffle-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/srcs/hadoop-mapreduce-client-jobclient-2.2.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/jars/hadoop-mapreduce-client-jobclient-2.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/docs/hadoop-mapreduce-client-jobclient-2.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-launcher_2.11/srcs/spark-launcher_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-launcher_2.11/jars/spark-launcher_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-launcher_2.11/docs/spark-launcher_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-tags_2.11/srcs/spark-tags_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-tags_2.11/jars/spark-tags_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-tags_2.11/docs/spark-tags_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.6-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.scalatest/scalatest_2.11/docs/scalatest_2.11-2.2.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.spark-project.spark/unused/srcs/unused-1.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.spark-project.spark/unused/jars/unused-1.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.spark-project.spark/unused/docs/unused-1.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-network-common_2.11/srcs/spark-network-common_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-network-common_2.11/jars/spark-network-common_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-network-common_2.11/docs/spark-network-common_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/io.netty/netty-all/srcs/netty-all-4.0.29.Final-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/io.netty/netty-all/jars/netty-all-4.0.29.Final.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/io.netty/netty-all/docs/netty-all-4.0.29.Final-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-network-shuffle_2.11/srcs/spark-network-shuffle_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-network-shuffle_2.11/jars/spark-network-shuffle_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-network-shuffle_2.11/docs/spark-network-shuffle_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.fusesource.leveldbjni/leveldbjni-all/srcs/leveldbjni-all-1.8-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.fusesource.leveldbjni/leveldbjni-all/bundles/leveldbjni-all-1.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.fusesource.leveldbjni/leveldbjni-all/docs/leveldbjni-all-1.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.6.5-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.6.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/docs/jackson-databind-2.6.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.6.5-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.6.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/docs/jackson-annotations-2.6.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.6.5-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.6.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/docs/jackson-core-2.6.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-unsafe_2.11/srcs/spark-unsafe_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-unsafe_2.11/jars/spark-unsafe_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-unsafe_2.11/docs/spark-unsafe_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/net.java.dev.jets3t/jets3t/srcs/jets3t-0.7.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/net.java.dev.jets3t/jets3t/jars/jets3t-0.7.1.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-recipes/srcs/curator-recipes-2.4.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-recipes/bundles/curator-recipes-2.4.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-recipes/docs/curator-recipes-2.4.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-framework/srcs/curator-framework-2.4.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-framework/bundles/curator-framework-2.4.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-framework/docs/curator-framework-2.4.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-client/srcs/curator-client-2.4.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-client/bundles/curator-client-2.4.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.curator/curator-client/docs/curator-client-2.4.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.zookeeper/zookeeper/srcs/zookeeper-3.4.5-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.zookeeper/zookeeper/jars/zookeeper-3.4.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.zookeeper/zookeeper/docs/zookeeper-3.4.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.google.guava/guava/srcs/guava-14.0.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.google.guava/guava/bundles/guava-14.0.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.google.guava/guava/docs/guava-14.0.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/javax.servlet/javax.servlet-api/srcs/javax.servlet-api-3.1.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.1.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/javax.servlet/javax.servlet-api/docs/javax.servlet-api-3.1.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.3.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.3.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-lang3/docs/commons-lang3-3.3.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-math3/srcs/commons-math3-3.4.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.4.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.commons/commons-math3/docs/commons-math3-3.4.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.slf4j/jul-to-slf4j/srcs/jul-to-slf4j-1.7.16-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.16.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.slf4j/jul-to-slf4j/docs/jul-to-slf4j-1.7.16-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.slf4j/jcl-over-slf4j/srcs/jcl-over-slf4j-1.7.16-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.16.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.slf4j/jcl-over-slf4j/docs/jcl-over-slf4j-1.7.16-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.ning/compress-lzf/srcs/compress-lzf-1.0.3-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.ning/compress-lzf/bundles/compress-lzf-1.0.3.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.ning/compress-lzf/docs/compress-lzf-1.0.3-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/net.jpountz.lz4/lz4/srcs/lz4-1.3.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/net.jpountz.lz4/lz4/jars/lz4-1.3.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/net.jpountz.lz4/lz4/docs/lz4-1.3.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.roaringbitmap/RoaringBitmap/srcs/RoaringBitmap-0.5.11-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.roaringbitmap/RoaringBitmap/bundles/RoaringBitmap-0.5.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.roaringbitmap/RoaringBitmap/docs/RoaringBitmap-0.5.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.json4s/json4s-jackson_2.11/srcs/json4s-jackson_2.11-3.2.11-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.json4s/json4s-jackson_2.11/jars/json4s-jackson_2.11-3.2.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.json4s/json4s-jackson_2.11/docs/json4s-jackson_2.11-3.2.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.json4s/json4s-core_2.11/srcs/json4s-core_2.11-3.2.11-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.json4s/json4s-core_2.11/jars/json4s-core_2.11-3.2.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.json4s/json4s-core_2.11/docs/json4s-core_2.11-3.2.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.json4s/json4s-ast_2.11/srcs/json4s-ast_2.11-3.2.11-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.json4s/json4s-ast_2.11/jars/json4s-ast_2.11-3.2.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.json4s/json4s-ast_2.11/docs/json4s-ast_2.11-3.2.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.6-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.thoughtworks.paranamer/paranamer/docs/paranamer-2.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.scala-lang/scalap/srcs/scalap-2.11.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.11.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.scala-lang/scalap/docs/scalap-2.11.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_COMPILER_CONTAINER"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/srcs/scala-parser-combinators_2.11-1.0.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/docs/scala-parser-combinators_2.11-1.0.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-client/srcs/jersey-client-2.22.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-client/jars/jersey-client-2.22.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-client/docs/jersey-client-2.22.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/javax.ws.rs/javax.ws.rs-api/srcs/javax.ws.rs-api-2.0.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/javax.ws.rs/javax.ws.rs-api/jars/javax.ws.rs-api-2.0.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/javax.ws.rs/javax.ws.rs-api/docs/javax.ws.rs-api-2.0.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-common/srcs/jersey-common-2.22.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-common/jars/jersey-common-2.22.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-common/docs/jersey-common-2.22.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/javax.annotation/javax.annotation-api/srcs/javax.annotation-api-1.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/javax.annotation/javax.annotation-api/jars/javax.annotation-api-1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/javax.annotation/javax.annotation-api/docs/javax.annotation-api-1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.bundles.repackaged/jersey-guava/srcs/jersey-guava-2.22.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.bundles.repackaged/jersey-guava/bundles/jersey-guava-2.22.2.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-api/srcs/hk2-api-2.4.0-b34-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-api/jars/hk2-api-2.4.0-b34.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-api/docs/hk2-api-2.4.0-b34-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-utils/srcs/hk2-utils-2.4.0-b34-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-utils/jars/hk2-utils-2.4.0-b34.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-utils/docs/hk2-utils-2.4.0-b34-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2.external/aopalliance-repackaged/srcs/aopalliance-repackaged-2.4.0-b34-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2.external/aopalliance-repackaged/jars/aopalliance-repackaged-2.4.0-b34.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.hk2.external/aopalliance-repackaged/docs/aopalliance-repackaged-2.4.0-b34-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2.external/javax.inject/srcs/javax.inject-2.4.0-b34-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2.external/javax.inject/jars/javax.inject-2.4.0-b34.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.hk2.external/javax.inject/docs/javax.inject-2.4.0-b34-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-locator/srcs/hk2-locator-2.4.0-b34-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-locator/jars/hk2-locator-2.4.0-b34.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/hk2-locator/docs/hk2-locator-2.4.0-b34-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.javassist/javassist/srcs/javassist-3.18.1-GA-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.1-GA.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.javassist/javassist/docs/javassist-3.18.1-GA-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/osgi-resource-locator/srcs/osgi-resource-locator-1.0.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/osgi-resource-locator/jars/osgi-resource-locator-1.0.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.hk2/osgi-resource-locator/docs/osgi-resource-locator-1.0.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-server/srcs/jersey-server-2.22.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-server/jars/jersey-server-2.22.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.core/jersey-server/docs/jersey-server-2.22.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.media/jersey-media-jaxb/srcs/jersey-media-jaxb-2.22.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.media/jersey-media-jaxb/jars/jersey-media-jaxb-2.22.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.media/jersey-media-jaxb/docs/jersey-media-jaxb-2.22.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/javax.validation/validation-api/srcs/validation-api-1.1.0.Final-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/javax.validation/validation-api/docs/validation-api-1.1.0.Final-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet/srcs/jersey-container-servlet-2.22.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet/jars/jersey-container-servlet-2.22.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet/docs/jersey-container-servlet-2.22.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet-core/srcs/jersey-container-servlet-core-2.22.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet-core/jars/jersey-container-servlet-core-2.22.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet-core/docs/jersey-container-servlet-core-2.22.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.mesos/mesos/jars/mesos-0.21.1-shaded-protobuf.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/io.netty/netty/srcs/netty-3.8.0.Final-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/io.netty/netty/bundles/netty-3.8.0.Final.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/io.netty/netty/docs/netty-3.8.0.Final-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.clearspring.analytics/stream/srcs/stream-2.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.clearspring.analytics/stream/jars/stream-2.7.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.clearspring.analytics/stream/docs/stream-2.7.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-core/srcs/metrics-core-3.1.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-core/bundles/metrics-core-3.1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-core/docs/metrics-core-3.1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-jvm/srcs/metrics-jvm-3.1.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-jvm/bundles/metrics-jvm-3.1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-jvm/docs/metrics-jvm-3.1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-json/srcs/metrics-json-3.1.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-json/bundles/metrics-json-3.1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-json/docs/metrics-json-3.1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-graphite/srcs/metrics-graphite-3.1.2-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-graphite/bundles/metrics-graphite-3.1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/io.dropwizard.metrics/metrics-graphite/docs/metrics-graphite-3.1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.11/srcs/jackson-module-scala_2.11-2.6.5-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.11/bundles/jackson-module-scala_2.11-2.6.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.11/docs/jackson-module-scala_2.11-2.6.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-paranamer/srcs/jackson-module-paranamer-2.6.5-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-paranamer/bundles/jackson-module-paranamer-2.6.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-paranamer/docs/jackson-module-paranamer-2.6.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.ivy/ivy/srcs/ivy-2.4.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.ivy/ivy/jars/ivy-2.4.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.ivy/ivy/docs/ivy-2.4.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/oro/oro/srcs/oro-2.0.8-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/oro/oro/jars/oro-2.0.8.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/net.razorvine/pyrolite/srcs/pyrolite-4.9-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/net.razorvine/pyrolite/jars/pyrolite-4.9.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/net.razorvine/pyrolite/docs/pyrolite-4.9-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/net.sf.py4j/py4j/srcs/py4j-0.10.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/net.sf.py4j/py4j/jars/py4j-0.10.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/net.sf.py4j/py4j/docs/py4j-0.10.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-sql_2.11/srcs/spark-sql_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-sql_2.11/docs/spark-sql_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/com.univocity/univocity-parsers/srcs/univocity-parsers-2.1.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/com.univocity/univocity-parsers/jars/univocity-parsers-2.1.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/com.univocity/univocity-parsers/docs/univocity-parsers-2.1.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-sketch_2.11/srcs/spark-sketch_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-sketch_2.11/jars/spark-sketch_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-sketch_2.11/docs/spark-sketch_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/srcs/spark-catalyst_2.11-2.0.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/jars/spark-catalyst_2.11-2.0.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/docs/spark-catalyst_2.11-2.0.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.codehaus.janino/janino/srcs/janino-2.7.8-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.codehaus.janino/janino/jars/janino-2.7.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.codehaus.janino/janino/docs/janino-2.7.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.codehaus.janino/commons-compiler/srcs/commons-compiler-2.7.8-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.codehaus.janino/commons-compiler/jars/commons-compiler-2.7.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.codehaus.janino/commons-compiler/docs/commons-compiler-2.7.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.antlr/antlr4-runtime/srcs/antlr4-runtime-4.5.3-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.antlr/antlr4-runtime/jars/antlr4-runtime-4.5.3.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.antlr/antlr4-runtime/docs/antlr4-runtime-4.5.3-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/commons-codec/commons-codec/srcs/commons-codec-1.10-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/commons-codec/commons-codec/docs/commons-codec-1.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-column/srcs/parquet-column-1.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-column/jars/parquet-column-1.7.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-column/docs/parquet-column-1.7.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-common/srcs/parquet-common-1.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-common/jars/parquet-common-1.7.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-common/docs/parquet-common-1.7.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-encoding/srcs/parquet-encoding-1.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-encoding/jars/parquet-encoding-1.7.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-encoding/docs/parquet-encoding-1.7.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-generator/srcs/parquet-generator-1.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-generator/jars/parquet-generator-1.7.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-generator/docs/parquet-generator-1.7.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-hadoop/srcs/parquet-hadoop-1.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-hadoop/jars/parquet-hadoop-1.7.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-hadoop/docs/parquet-hadoop-1.7.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-format/srcs/parquet-format-2.3.0-incubating-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-format/jars/parquet-format-2.3.0-incubating.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-format/docs/parquet-format-2.3.0-incubating-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-jackson/srcs/parquet-jackson-1.7.0-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.apache.parquet/parquet-jackson/jars/parquet-jackson-1.7.0.jar"/>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/junit/junit/srcs/junit-4.10-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/junit/junit/jars/junit-4.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/Users/rohitvg/.ivy2/cache/junit/junit/docs/junit-4.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/Users/rohitvg/.ivy2/cache/org.hamcrest/hamcrest-core/srcs/hamcrest-core-1.1-sources.jar" kind="lib" path="/Users/rohitvg/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="output" path="bin"/>
+</classpath>
