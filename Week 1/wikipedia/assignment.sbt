@@ -1,0 +1,2 @@
+course := "bigdata"
+assignment := "wikipedia"
