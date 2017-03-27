@@ -6,6 +6,8 @@ import org.apache.spark.SparkContext._
 import org.apache.spark.rdd.RDD
 import annotation.tailrec
 import scala.reflect.ClassTag
+import org.apache.spark.RangePartitioner
+import org.apache.spark.HashPartitioner
 
 /** A raw stackoverflow posting, either a question or an answer */
 case class Posting(postingType: Int, id: Int, acceptedAnswer: Option[Int], parentId: Option[Int], score: Int, tags: Option[String]) extends Serializable
@@ -24,7 +26,7 @@ object StackOverflow extends StackOverflow {
     val grouped = groupedPostings(raw)
     val scored = scoredPostings(grouped)
     val vectors = vectorPostings(scored)
-    //    assert(vectors.count() == 2121822, "Incorrect number of vectors: " + vectors.count())
+    // assert(vectors.count() == 2121822, "Incorrect number of vectors: " + vectors.count())
 
     val means = kmeans(sampleVectors(vectors), vectors, debug = true)
     val results = clusterResults(means, vectors)
@@ -74,11 +76,10 @@ class StackOverflow extends Serializable {
 
   /** Group the questions and answers together */
   def groupedPostings(postings: RDD[Posting]): RDD[(Int, Iterable[(Posting, Posting)])] = {
-    postings.cache()
     val questions = postings.filter(posting => posting.postingType == 1).map(posting => (posting.id, posting))
     val answers = postings.filter(posting => posting.postingType == 2).map(posting => (posting.parentId.get, posting)) // we can call get on the option safely, because all answers have a parent question.
-    val groupedPostingsRdd = questions.join(answers)
     // Join does not group by Key, so we have to do it manually
+    val groupedPostingsRdd = questions.join(answers)
     groupedPostingsRdd.groupByKey()
   }
 
@@ -97,7 +98,8 @@ class StackOverflow extends Serializable {
       highScore
     }
 
-    // grouped.map( pair => ( pair._2.head._1, answerHighScore(pair._2.map(arg => arg._2).toArray) ) )
+    // val tunedPartitioner = new RangePartitioner(8, grouped) // 8 partitions
+    // val partitionedGrouped = grouped.partitionBy(tunedPartitioner).persist()
     grouped.map(
       pair => {
         // Pair is an Iterable of (question, answer), question is the same in all pairs, answers is different
@@ -134,7 +136,8 @@ class StackOverflow extends Serializable {
       (distance, scoreOfHighestRatedAnswer)
     })
 
-    intermediate.filter(pair => { pair._1 != emptyOption }).map(pair => (pair._1 * langSpread, pair._2))
+    val vector = intermediate.filter(pair => { pair._1 != emptyOption }).map(pair => (pair._1 * langSpread, pair._2))
+    vector.cache()
   }
 
   /** Sample the vectors */
@@ -175,7 +178,7 @@ class StackOverflow extends Serializable {
           case (lang, vectors) => reservoirSampling(lang, vectors.toIterator, perLang).map((lang, _))
         }).collect()
 
-    assert(res.length == kmeansKernels, res.length)
+    // assert(res.length == kmeansKernels, res.length)
     res
   }
 
@@ -187,9 +190,15 @@ class StackOverflow extends Serializable {
 
   /** Main kmeans computation */
   @tailrec final def kmeans(means: Array[(Int, Int)], vectors: RDD[(Int, Int)], iter: Int = 1, debug: Boolean = false): Array[(Int, Int)] = {
+    // val cachedVectors = vectors.cache()
     val newMeans = means.clone() // you need to compute newMeans
-
-    // TODO: Fill in the newMeans array
+    vectors.map(point => (findClosest(point, newMeans), point))
+      .groupByKey()
+      .mapValues(averageVectors(_))
+      .collect()
+      .foreach {
+        case (index, newPoint) => newMeans.update(index, newPoint)
+      }
     val distance = euclideanDistance(means, newMeans)
 
     if (debug) {
